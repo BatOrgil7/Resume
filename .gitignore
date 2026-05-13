@@ -1,4 +1,5 @@
 overleaf_source_*/
+overleaf_verify_*/
 *.aux
 *.log
 *.out
