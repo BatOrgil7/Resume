@@ -1,0 +1,5 @@
+overleaf_source_*/
+*.aux
+*.log
+*.out
+*.synctex.gz
