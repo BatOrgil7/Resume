@@ -127,7 +127,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages:} Python, R, Java, SQL, C++, Rust, JavaScript, TypeScript, HTML, CSS \\
-     \textbf{Libraries/Frameworks:} PyTorch, TensorFlow, Hugging Face Transformers, Scikit-learn, OpenCV, Pandas, NumPy, React, Flask, Tailwind CSS, Matplotlib, Seaborn \\
+     \textbf{Libraries/Frameworks:} PyTorch/Keras, TensorFlow, Hugging Face Transformers, Scikit-learn, OpenCV, Pandas, NumPy, React, Flask, Tailwind CSS, Matplotlib, Seaborn \\
      \textbf{Tools/Platforms:} Git, GitHub, Neo4j, Google Cloud, MongoDB, MySQL, Docker, Figma, GitLab, AWS
     }}
  \end{itemize}
@@ -158,13 +158,14 @@
         \resumeItem{Improved the academic performance of \textbf{50+} students by providing individualized tutoring in Python, Java, Data Structures and Algorithms, reinforcing programming fundamentals and problem-solving skills.}
         \resumeItemListEnd
         \resumeSubheading
-          {American Cultural \& Information Center}{Ulaanbaatar, Mongolia}
-          {Intern}{Sep 2022 - May 2023}
+          {PotatoNet AI}{Seoul, South Korea}
+          {Machine Learning Engineering Intern}{June 2026 - Present}
           \resumeItemListStart
+            \resumeItem {Built a FastAPI REST service exposing a trained CNN-LSTM-Attention model that pre-predicts electrical faults one week ahead (~94.7 accuracy), extracting it from a legacy Django codebase into a clean inference service within a 16-container microservices platform.}
             \resumeItem
-            {Built website front-end assets and branded digital content with HTML, CSS, Figma, Canva, and Photoshop, improving user experience and marketing consistency.}
+            {Curated a 12,442-example training set for a GraphCodeBERT malicious-JavaScript model, deduplicating ~267K scripts via SimHash LSH to prevent train/test leakage, and packaged the embedding-to-graph clustering stack (Neo4j GDS) in Docker.}
             \resumeItem
-            {Supported targeted campaigns reaching \textbf{356,000+} people and produced brand/system design guidelines for consistent communications.}
+            {Productionized an internal LSTM inference service, migrating it to an Nginx → Gunicorn → Django stack with TLS via a reusable deployment pipeline, validated in staging with zero downtime to the live service.}
           \resumeItemListEnd
     
     \resumeSubHeadingListEnd
@@ -179,13 +180,6 @@
       \resumeItem{Developed a Computer Vision pipeline using OpenCV and MediaPipe for robust Hand Tracking and Landmark Detection, enabling structured feature extraction from live webcam input.}
       \resumeItem{Designed and trained a Deep Learning CNN model in TensorFlow/Keras for ASL alphabet classification, achieving 97.19\% accuracy on validation data.}
       \resumeItem{Optimized the system for low-latency Real-Time Inference, integrating preprocessing, model prediction, and text output into a responsive end-to-end deployment pipeline.}
-    \resumeItemListEnd
-
-  \resumeProjectHeading
-    {\textbf{CS2 Esports Analytics Platform} $|$ SQL, Database Design, Data Modeling}{}
-    \resumeItemListStart
-      \resumeItem{Engineered normalized relational database and developed complex SQL queries using aggregate functions, nested subqueries, and percentile ranking to identify players; detect outliers in performance distribution}
-      \resumeItem{Designed data model enabling correlation analysis between map-specific performance, team composition factors, and win probability, with schema optimized for regression-ready data extraction and cohort analysis across tournament tiers}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
