@@ -18,7 +18,7 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume/Bat-Orgil_Erdenebat_Resume.tex      
+          root_file: Bat-Orgil_Erdenebat_Resume.tex      
 
       - name: Commit the PDF
         uses: stefanzweifel/git-auto-commit-action@v5
