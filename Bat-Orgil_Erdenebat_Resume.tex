@@ -49,7 +49,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-10pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -63,11 +63,19 @@
   }
 }
 
+\newcommand{\resumeEducationSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{\small#3} & {\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -104,33 +112,34 @@
 \begin{center}
     \textbf{\Huge \scshape\textbf{\Large Bat-Orgil Erdenebat }} \\ \vspace{1pt}
     \small (662) 380-7252 $|$ \href{mailto:batorgilrb@gmail.com}{\underline{batorgilrb@gmail.com}} $|$ 
-    \href{https://github.com/BatOrgil7}{\underline{github.com/BatOrgil7}} $|$ {\underline{\href{https://linkedin.com/in/bat-orgil-erdenebat}{in/bat-orgil-erdenebat}}} $|$ {{Oxford, MS}}
+    \href{https://github.com/BatOrgil7}{\underline{github.com/BatOrgil7}} $|$ {\underline{\href{https://linkedin.com/in/bat-orgil-erdenebat}{linkedin.com/in/bat-orgil-erdenebat}}} $|$ {{Memphis, TN}}
 \end{center}
 
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
+    \resumeEducationSubheading
       {University of Mississippi}{Expected May, 2027}
       {Bachelor of Science in Computer Science – Data Science Emphasis; Engineering Math Minor}{\textnormal{\textbf{GPA: 3.78}}} 
-      \resumeItemListStart
-      \resumeItem{\textbf{Affiliations:} Sally McDonnell Barksdale Honors College, ACM Coding Club}
-      \resumeItem{\textbf{Awards:} UM Experiential Learning in Eastern Asia — \$9,000 Freeman Grant, Chancellor's Honor Roll Fall 2024}
-      \resumeItem{\textbf{Certifications:} Career Essentials in Generative AI (Microsoft, LinkedIn) June 2024}
-    \resumeItemListEnd
-  \resumeSubHeadingListEnd
+    \resumeSubHeadingListEnd
+    \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Awards:} Freeman Grant - \$9,000, Chancellor's Honor Roll Fall 2024, Spring 2025 \\
+     \textbf{Certifications:} Machine Learning Foundations e-Certificate (Cornell University) May - August 2026, Career Essentials in Generative AI (Microsoft) June 2024
+    }}
+  \end{itemize}
   
 %-----------TECHNICAL SKILLS-----------------
 
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages:} Python, R, Java, SQL, C++, Rust, JavaScript, TypeScript, HTML, CSS \\
-     \textbf{Libraries/Frameworks:} PyTorch/Keras, TensorFlow, Hugging Face Transformers, Scikit-learn, OpenCV, Pandas, NumPy, React, Flask, Tailwind CSS, Matplotlib, Seaborn \\
+     \textbf{Languages:} Python, R, Java, SQL, C++, Rust, JavaScript, TypeScript, C, LaTeX\\
+     \textbf{Libraries/Frameworks:} PyTorch/Keras, TensorFlow, Hugging Face Transformers, Scikit-learn, OpenCV, Pandas, NumPy, MediaPipe, Flask, Tailwind CSS, Matplotlib, Seaborn \\
      \textbf{Tools/Platforms:} Git, GitHub, Neo4j, Google Cloud, MongoDB, MySQL, Docker, Figma, GitLab, AWS
     }}
- \end{itemize}
+  \end{itemize}
 
 %-----------EXPERIENCE-----------------
 
@@ -145,41 +154,43 @@
             \resumeItem{Completing a 9-week ML Foundations curriculum using industry-relevant tools to analyze data, build pipelines, and train and validate ML models.}
             \resumeItem{Preparing for AI Studio challenge projects with industry advisors to deliver real-world ML solutions and portfolio-ready work.}
         \resumeItemListEnd
-
+        
+        \resumeSubheading
+        {PotatoNet Co., Ltd.}{Seoul, South Korea}
+        {Machine Learning Engineering Intern}{June 2026 - Present}
+        \resumeItemListStart
+            \resumeItem{Extracted a CNN-LSTM-Attention fault predictor (\textbf{94.7\%} accuracy) from a legacy Django monolith into a clean FastAPI service on a 16-container microservices platform, and migrated an internal LSTM service to an Nginx → Gunicorn → Django + TLS stack with zero-downtime, reusable deployments.}
+            \resumeItem{Built and shipped a production graph-ETL pipeline that backfilled 6 months of threat data into a live Neo4j store (\textbf{19.4K} malicious-JS nodes, 13.7K domains, 3.9K IPs) via idempotent, rollback-tagged loads automated as a nightly self-healing cron job, and deduplicated 267K scripts with SimHash LSH into a leak-free 12.4K-example training set.}
+            \resumeItem{Engineered a 7-signal attacker-profiling engine that clusters malicious JavaScript into named ``families'' (SimHash AST similarity, perceptual screenshot hashing, and shared TLS-cert/IP/ASN/registrant infrastructure) via GDS Leiden community detection, then diagnosed and fixed a 52K-script over-merge caused by benign library bridges — cutting max family size to \textbf{476} across 334 clean families.}
+          \resumeItemListEnd
+          
         \resumeSubheading
         {University of Mississippi – Dept. of Computer \& Information Science}{Oxford, MS}
-        {Teaching Assistant – CIS 356, CIS 112, \& CIS 111}{August 2025 – Present}
+        {Teaching Assistant \& Computer Science Tutor}{August 2025 – Present}
         \resumeItemListStart
-            \resumeItem{Led labs for \textbf{100+} CS and STEM students across Data Structures in Python, Computer Science I, and Computer Science II, strengthening Python, Java, OOP, algorithms, and core data structures.}
-            \resumeItem{Coached students through debugging, optimization, and algorithmic reasoning, improving code clarity and problem-solving readiness.}
+            \resumeItem{Led hands-on labs for \textbf{200+} STEM students across four courses (Data Structures and Algorithms), lifting Python, Java, and OOP proficiency by coaching students through debugging, optimization, and algorithmic reasoning.}
+            \resumeItem{Raised academic performance for \textbf{50+} mentees by delivering individualized tutoring in Python, Java, and Data Structures \& Algorithms, reinforcing programming fundamentals and independent problem-solving.}
         \resumeItemListEnd
-        \resumeSubSubheading{Computer Science Tutor}{January 2026 – Present}
-        \resumeItemListStart
-        \resumeItem{Improved the academic performance of \textbf{50+} students by providing individualized tutoring in Python, Java, Data Structures and Algorithms, reinforcing programming fundamentals and problem-solving skills.}
-        \resumeItemListEnd
-        \resumeSubheading
-          {PotatoNet AI}{Seoul, South Korea}
-          {Machine Learning Engineering Intern}{June 2026 - Present}
-          \resumeItemListStart
-            \resumeItem {Built a FastAPI REST service exposing a trained CNN-LSTM-Attention model that pre-predicts electrical faults one week ahead (~94.7 accuracy), extracting it from a legacy Django codebase into a clean inference service within a 16-container microservices platform.}
-            \resumeItem
-            {Curated a 12,442-example training set for a GraphCodeBERT malicious-JavaScript model, deduplicating ~267K scripts via SimHash LSH to prevent train/test leakage, and packaged the embedding-to-graph clustering stack (Neo4j GDS) in Docker.}
-            \resumeItem
-            {Productionized an internal LSTM inference service, migrating it to an Nginx → Gunicorn → Django stack with TLS via a reusable deployment pipeline, validated in staging with zero downtime to the live service.}
-          \resumeItemListEnd
     
     \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
-\section{Research and Project}
+\section{Projects}
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
-    {\textbf{Real-Time ASL-to-Text Recognition System} $|$ OpenCV, MediaPipe, TensorFlow, Matplotlib, scikit-learn}{}
+    {\textbf{Census Income Classification}\;|\;\href{https://github.com/BatOrgil7/census-income-ml-pipeline}{\underline{github.com/BatOrgil7/census-income-ml-pipeline}}}{}
     \resumeItemListStart
-      \resumeItem{Developed a Computer Vision pipeline using OpenCV and MediaPipe for robust Hand Tracking and Landmark Detection, enabling structured feature extraction from live webcam input.}
-      \resumeItem{Designed and trained a Deep Learning CNN model in TensorFlow/Keras for ASL alphabet classification, achieving 97.19\% accuracy on validation data.}
-      \resumeItem{Optimized the system for low-latency Real-Time Inference, integrating preprocessing, model prediction, and text output into a responsive end-to-end deployment pipeline.}
+      \resumeItem{Developed an end-to-end binary classification pipeline to predict an individual's annual income by performing exploratory data analysis, data preprocessing, feature engineering, and training traditional machine learning models on the U.S. Census Income dataset.}
+      \resumeItem{Evaluated and optimizing model performance by comparing supervised learning algorithms using accuracy, precision, recall, F1-score, and ROC-AUC, while applying hyperparameter tuning to improve generalization.}
+      \resumeItem{Implemented a neural network model to solve the same classification task and comparing its predictive performance, robustness, and fairness against traditional machine learning approaches.}
+    \resumeItemListEnd
+    
+  \resumeProjectHeading
+    {\textbf{Streaming Evaluation Protocol for CSLR}\;|\;\href{https://github.com/BatOrgil7/signstream-eval}{\underline{github.com/BatOrgil7/signstream-eval}}}{}
+    \resumeItemListStart
+      \resumeItem{Designed a standardized evaluation protocol for streaming sign language recognition, adapting latency/stability metrics from streaming ASR and simultaneous MT to fill a gap left by offline-only benchmarks.}
+      \resumeItem{Constructed a fault-tolerant landmark extraction pipeline (multiprocessing, content-addressed caching, failure-manifest tracking) processing PHOENIX-2014T across video and frame-folder formats.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
