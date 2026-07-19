@@ -123,7 +123,7 @@
       {University of Mississippi}{Expected May 2027}
       {Bachelor of Science in Computer Science – Data Science Emphasis; Engineering Math Minor}{\textnormal{\textbf{GPA: 3.78}}} 
     \resumeSubHeadingListEnd
-    \begin{itemize}[leftmargin=0.15in, label={}]
+    \begin{itemize}[leftmargin=0.20in, label={}]
     \small{\item{
     \textbf{Relevant Coursework:} Algorithms \& Data Structure Analysis, Combinatorics, Linear Algebra, Statistics, Machine Learning, Database Systems, Information Visualization, Operating Systems, Computer Organization \\
     \textbf{Awards:} Freeman Grant - \$9,000, Chancellor's Honor Roll Fall 2024, Spring 2025 \\
@@ -134,7 +134,7 @@
 %-----------TECHNICAL SKILLS-----------------
 
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0.20in, label={}]
     \small{\item{
      \textbf{Languages:} Python, R, Java, SQL, C++, Rust, JavaScript, TypeScript, C, LaTeX, Assembly\\
      \textbf{Libraries/Frameworks:} PyTorch/Keras, TensorFlow, Hugging Face Transformers, Scikit-learn, OpenCV, Pandas, NumPy, MediaPipe, Flask, Tailwind CSS, Matplotlib, Seaborn \\
@@ -181,9 +181,9 @@
   \resumeProjectHeading
     {\textbf{Census Income Classification}\;|\;\href{https://github.com/BatOrgil7/census-income-ml-pipeline}{\underline{github.com/BatOrgil7/census-income-ml-pipeline}}}{}
     \resumeItemListStart
-      \resumeItem{Developed an end-to-end binary classification pipeline to predict an individual's annual income by performing exploratory data analysis, data preprocessing, feature engineering, and training traditional machine learning models on the U.S. Census Income dataset.}
-      \resumeItem{Evaluated and optimizing model performance by comparing supervised learning algorithms using accuracy, precision, recall, F1-score, and ROC-AUC, while applying hyperparameter tuning to improve generalization.}
-      \resumeItem{Implemented a neural network model to solve the same classification task and comparing its predictive performance, robustness, and fairness against traditional machine learning approaches.}
+      \resumeItem{Built an end-to-end ML pipeline on the U.S. Census Income dataset (32K+ records) to predict annual income. EDA, median imputation, log-transform of skewed features, one-hot encoding, and leakage-free scaling used. Tuned logistic regression via GridSearchCV, scoring on F1 to address class imbalance rather than misleading accuracy.}
+      \resumeItem{Implemented a 3-layer Keras neural network for the same task and found it only matched logistic regression on F1 (0.70 vs 0.68), concluding the simpler, interpretable model was preferable for this tabular problem.}
+      \resumeItem{Audited model coefficients for fairness and surfaced a discrimination risk, informing a recommendation against naive deployment for lending use.}
     \resumeItemListEnd
     
   \resumeProjectHeading
